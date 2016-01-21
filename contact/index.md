@@ -12,4 +12,21 @@ image:
   credit: Walter-NEST
   creditlink: http://walter-nest.deviantart.com/gallery/
 ---
+### @ IRISA / INRIA Rennes
 
+| :------------- | :------------- |
+| **Address:** | Campus universitaire de Beaulieu |
+| | 263 Avenue du General Leclerc - Bat 12 |
+| | 35042 RENNES Cedex - France |
+| | Office F213 |
+| **Phone:** | |
+| **Email:** | kevin.corre@inria.fr  |
+
+### @ Orange Labs
+
+| :------------- | :------------- |
+| **Address:** | 4 Rue du Clos Courtel |
+| | 35510 CESSON SEVIGNE - France |
+| | Office CAL112 |
+| **Phone:** | |
+| **Email:** | kevin1.corre@orange.com  |
