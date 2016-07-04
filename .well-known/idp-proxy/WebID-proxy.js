@@ -77,9 +77,10 @@ var idp = {
   * Generation of an IdAssertion through OIDC IdP
   */
   generateAssertion: (contents /*, origin, hint */) => {
-    return getStoredKey()
-    .then(key => getWebID())
-    .then(webId => signAssertion(contents, key, webId))
+    var pKey = getStoredKey()
+    var pWebID = getWebID())
+    Promise.all([pKey, pWebID])
+    .then(results => signAssertion(contents, results[0], results[1]))
   },
   /**
   * Verification of a received IdAssertion validity
