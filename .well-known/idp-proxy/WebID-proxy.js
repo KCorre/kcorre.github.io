@@ -78,8 +78,8 @@ var idp = {
   */
   generateAssertion: (contents /*, origin, hint */) => {
     var pKey = getStoredKey()
-    var pWebID = getWebID())
-    Promise.all([pKey, pWebID])
+    var pWebID = getWebID()
+    return Promise.all([pKey, pWebID])
     .then(results => signAssertion(contents, results[0], results[1]))
   },
   /**
