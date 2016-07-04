@@ -1,5 +1,5 @@
 var WebIDKey = 'https://kcorre.github.io/.well-known/webid/foaf.json'
-var idp_addr = {'domain': "https://kcorre.github.io", 'protocol': 'WebID-proxy'}
+var idp_addr = {'domain': "https://kcorre.github.io", 'protocol': 'WebID-proxy.js'}
 
 function getWebID(){
   return new Promise((resolve, reject) => {
