@@ -1,0 +1,16 @@
+{
+    "me": "https://kcorre.github.io/.well-known/webid/foaf.json#me",
+    "name": "Kevin Corre",
+    "key": {"alg":"RS256",
+            "e":"AQAB",
+            "ext":true,
+            "key_ops":["verify"],
+            "kty":"RSA",
+            "n":"018b01BNUqDrGI6Oh862Ax7EC6NphvM8rAonlVM0Te3BFuejBi8PRPGyA5LWOeK3b55RFgdQUif1jY-m2GsNymVU2Q1jPM7MFXP0elCT1Wbn99_QMWVFHcltjAJMqDJ0qC76pp0M-o2MkuIZvH03nAuSRnhNCiQvmSAdJjIqVEA8vi5Klw4O5oMBBabV5-tdloWLv7N5RKbycOasCN9P51Lsm8ueOgQKrRZNPU5SNc9p4-jTbU4-egptBu4uPmKinzTzhPC7Wutk9WKrEy7JeYbdmm2oYRCXFIeyiprRisTYVHc5dwmCg4PatlA-KqHsjBgQTtKp_p05XBk-rpM2tw"
+    },
+    "givenname": "Kevin",
+    "family_name": "Corre",
+    "nick": "Crynyd",
+    "homepage": "kcorre.github.io",
+    "workInfoHomepage": "PhD Student Orange Labs/IRISA"
+}

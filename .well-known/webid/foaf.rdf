@@ -1,0 +1,26 @@
+<rdf:RDF>
+    <foaf:PersonalProfileDocument rdf:about="">
+        <foaf:maker rdf:resource="http://base-echo.net/kcorre/foaf.rdf#me"/>
+        <foaf:primaryTopic rdf:resource="http://base-echo.net/kcorre/foaf.rdf#me"/>
+        <admin:generatorAgent rdf:resource="http://www.ldodds.com/foaf/foaf-a-matic"/>
+        <admin:errorReportsTo rdf:resource="mailto:leigh@ldodds.com"/>
+    </foaf:PersonalProfileDocument>
+    <foaf:Person rdf:about="http://base-echo.net/kcorre/foaf.rdf#me">
+        <foaf:name>Kevin Corre</foaf:name>
+        <cert:key>
+            <cert:RSAPublicKey>
+                <cert:modulus rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">
+                    B56DE4CAD39CB89AD966762636FD5DAAD9389DCF5FA8E67DFDDFB2158FED3E1F0418ED973334AE57A02E2FA4B7361F10677200A7AC8A0EB5AC14AD4F7D9D79C3679EA4DE92D7133FB8E64767753EE14D49F9D69E47E622D8E648AD9DC48637EF075416D63BB429D0DC6F33B72EE270BD4DC34FC1141A282225B5FABDDE7F03C9E7F6B056CDEE5E50EA90DE501DDF69C99BDA29AA30453B166CC127F6838F12AEA7E30D2EDF02E3FF39D5E3FFFB453EB0DB85FEBA9E87FE3B4EED72E1E82DAE7D8FBB8CBEFB358C2D5EA9F34A5F7D6B05F6A1698D7E41E1FF567946E12FEF6AF610CD2DE94CC042CA0E9921A43D8B4C2EB32106EB92D1D37D5B51ACAA1D888B01</cert:modulus>
+                <cert:exponent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
+                    65537
+                </cert:exponent>
+            </cert:RSAPublicKey>
+        </cert:key>
+        <foaf:givenname>Kevin</foaf:givenname>
+        <foaf:family_name>Corre</foaf:family_name>
+        <foaf:nick>Crynyd</foaf:nick>
+        <foaf:mbox_sha1sum>91e954a7380323f4ad7c11615a705464ee2dad13</foaf:mbox_sha1sum>
+        <foaf:homepage rdf:resource="base-echo.net"/>
+        <foaf:workInfoHomepage rdf:resource="PhD Student Orange Labs/IRISA"/>
+    </foaf:Person>
+</rdf:RDF>

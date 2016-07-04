@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>WebID for WebRTC config</title>
+    <script src='./webIDRTC.js'></script>
+</head>
+<body>
+  <button onclick="createDB()">Init</button><br/>
+  <button onclick="generatePubKey()">Generate</button><br/>
+  <span id='generatedPub'></span><br/>
+  <span id='generatedPri'></span><br/>
+    <button onclick="getStoredKey()">Get Stored</button>
+    <span id='stored'></span><br/>
+    <button onclick="dropDatabase()">Clear</button>
+</body>
+</html>
