@@ -1,12 +1,8 @@
 {
     "me": "https://kcorre.github.io/.well-known/webid/foaf.json#me",
     "name": "Kevin Corre",
-    "key": {"alg":"RS256",
-            "e":"AQAB",
-            "ext":true,
-            "key_ops":["verify"],
-            "kty":"RSA",
-            "n":"018b01BNUqDrGI6Oh862Ax7EC6NphvM8rAonlVM0Te3BFuejBi8PRPGyA5LWOeK3b55RFgdQUif1jY-m2GsNymVU2Q1jPM7MFXP0elCT1Wbn99_QMWVFHcltjAJMqDJ0qC76pp0M-o2MkuIZvH03nAuSRnhNCiQvmSAdJjIqVEA8vi5Klw4O5oMBBabV5-tdloWLv7N5RKbycOasCN9P51Lsm8ueOgQKrRZNPU5SNc9p4-jTbU4-egptBu4uPmKinzTzhPC7Wutk9WKrEy7JeYbdmm2oYRCXFIeyiprRisTYVHc5dwmCg4PatlA-KqHsjBgQTtKp_p05XBk-rpM2tw"
+    "key":
+    {"alg":"RS256","e":"AQAB","ext":true,"key_ops":["verify"],"kty":"RSA","n":"pgq_DruDJo-gmt9aoJ6i-WeX8MGVPyC182e1A9jawV9gv6r5mrQCGE-AM3MUjv7886J1SjWDwDerKyS_5RLXW5-fuClLHmEQLy9LAoFOl1P_M-zRi-I0UxrexvdxefnQUpSmUei8Vfh8XfC6hKgg-G51OcryhE3vuAYsTeBzMSeT0boLu9BbM6vZy8b-xcTaUcCpYRdLhSAT9j3N-KgNuVz_l2CBChWezQWsbF1AdGlMxMfn9WgJgP72ZgCKj-kOw5cMhCo3UouWO_-PluFavhBXa_ugUNRjsYB-OSm_O_dGsEs82C5Pp8LWKrIAExPFyuAPHq106A9DO_J4jlponw"
     },
     "givenname": "Kevin",
     "family_name": "Corre",
