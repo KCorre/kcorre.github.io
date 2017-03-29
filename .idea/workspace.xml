@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de64261c-f8c3-4b14-ac19-6a41bdd1478b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.well-known/idp-proxy/WebID-proxy.js" afterPath="$PROJECT_DIR$/.well-known/idp-proxy/WebID-proxy.js" />
-    </list>
+    <list default="true" id="de64261c-f8c3-4b14-ac19-6a41bdd1478b" name="Default" comment="" />
     <ignored path="kcorre.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -483,7 +481,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
