@@ -14,13 +14,13 @@ image:
 ---
 ### @ IRISA / INRIA Rennes
 
-| :------------- | :------------- |
-| **Address:** | Campus universitaire de Beaulieu |
-| | 263 Avenue du General Leclerc - Bat 12 |
-| | 35042 RENNES Cedex - France |
-| | Office F213 |
-| **Phone:** | |
-| **Email:** | kevin.corre@inria.fr  |
+| :-------------  | :------------- |
+| **Address:**    | Campus universitaire de Beaulieu |
+|                 | 263 Avenue du General Leclerc - Bat 12 |
+|                 | 35042 RENNES Cedex - France |
+|                 | Office F213 |
+| **Phone:**      | |
+| **Email:**      | kevin.corre@inria.fr  |
 
 ### @ Orange Labs
 
