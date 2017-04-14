@@ -8,7 +8,7 @@ Previously, from 2012 to 2014, I worked as an engineer at INRIA Rennes to develo
 
 I graduated from Master Degree in Computer Science from the University of Orleans in 2012.
 
-I will defend my PhD Thesis around October 2017. If you are looking for a Computer Scientist, I'm looking for a job! 
+I will defend my PhD Thesis around October 2017. If you are looking for a Computer Scientist, I'm looking for a job!
 
 #### Research
 Currently my topics of interest are related to **Identity Management** in the **Web** context and more particularly with the use case of **WebRTC** in mind.
@@ -34,6 +34,9 @@ is another interesting topics which poses new questions.
 #### Conferences
 * **Why Users Cannot Choose Their Identity Providers On The Web?**, K. Corre, O. Barais, G. Sunyé, J. Crom, V. Frey.<br/>
 <em>In PoPETS, the Third Issue of the Proceedings on Privacy Enhancing Technologies Symposium, Minneapolis, USA, 2017 -- Accepted for publication</em>
+
+* **A WebRTC Extension to Allow Identity Negotiation at Runtime**, K. Corre, S. Bécot, O. Barais, G. Sunyé.<br/>
+<em>In ICWE 2017, 17th International Conference on Web Engineering, Rome, Italy, 2017 -- Accepted for publication</em>
 
 #### Technicals
 * **Procédé de gestion de l'authentification d'un client dans un système informatique**, K. Corre, V. Frey.<br/>
