@@ -36,14 +36,14 @@ is another interesting topics which poses new questions.
 <em>In PoPETS, the Third Issue of the Proceedings on Privacy Enhancing Technologies Symposium, Minneapolis, USA, 2017 -- Accepted for publication</em>
 
 * **[A WebRTC Extension to Allow Identity Negotiation at Runtime](https://kcorre.github.io/papers/WebRTCExtensionAllowIdentityNegotiationRuntime.pdf)**, K. Corre, S. Bécot, O. Barais, G. Sunyé.<br/>
-<em>In ICWE 2017, 17th International Conference on Web Engineering, Rome, Italy, 2017 -- Accepted for publication</em>
+<em>In ICWE 2017, 17th International Conference on Web Engineering, Rome, Italy, 2017</em>
 
 #### Technicals
 * **Procédé de gestion de l'authentification d'un client dans un système informatique**, K. Corre, V. Frey.<br/>
 <em>Brevet WO2017006013 A1</em>
 
 
-* **Requirements for Trust and Privacy in WebRTC Peer-to-peer**, R. Copeland, K. Corre, I. Friese, S. El Jaouhari.<br/>
+* **[Requirements for Trust and Privacy in WebRTC Peer-to-peer](https://tools.ietf.org/html/draft-copeland-rtcweb-p2p-idp-auth-00)**, R. Copeland, K. Corre, I. Friese, S. El Jaouhari.<br/>
 <em>IETF Draft, [Draft](https://tools.ietf.org/html/draft-copeland-rtcweb-p2p-idp-auth-00)</em>
 
 #### Tools
