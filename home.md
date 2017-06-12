@@ -35,7 +35,7 @@ is another interesting topics which poses new questions.
 * **Why Users Cannot Choose Their Identity Providers On The Web?**, K. Corre, O. Barais, G. Sunyé, J. Crom, V. Frey.<br/>
 <em>In PoPETS, the Third Issue of the Proceedings on Privacy Enhancing Technologies Symposium, Minneapolis, USA, 2017 -- Accepted for publication</em>
 
-* **A WebRTC Extension to Allow Identity Negotiation at Runtime**, K. Corre, S. Bécot, O. Barais, G. Sunyé.<br/>
+* **[A WebRTC Extension to Allow Identity Negotiation at Runtime](https://kcorre.github.io/papers/WebRTCExtensionAllowIdentityNegotiationRuntime.pdf)**, K. Corre, S. Bécot, O. Barais, G. Sunyé.<br/>
 <em>In ICWE 2017, 17th International Conference on Web Engineering, Rome, Italy, 2017 -- Accepted for publication</em>
 
 #### Technicals
