@@ -1,0 +1,356 @@
+<!--<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.8cb970fb.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>-->
+
+
+<div class="page" ng-if="page == '0'">
+  <!--
+
+  <p>. To this end, we build a user-centric functional decomposition of security
+    properties
+    and protocols from a communication setup. We use information-theory entropy as a base trust metric and compute
+    a global trust value with aggregation operators. This end-value is then returned to the user. </p> -->
+
+  <p>Security on the Web is usually perceived by users through a green lock next to the URL adress bar of their browser.
+    This icon informs users that the Website they are visiting is accessed through a secure connection.
+    In addition, it also indicates that the web server has been authenticated through a cryptographic certificate.
+    Thus the browser asserts that <b>no attacker can break the confidentiality of the exchange</b> and that <b>no attacker is impersonating the website</b>.
+  </p>
+  <p><img src='images/httpslevel.888739dc.png'
+            width="25%" style="display:block; margin: 0 auto;"></p>
+
+  <p>With the advent of technology such as WebRTC, real-time communications are moving to the Internet.
+    The security of such communication is more complex than for a single web page as it now involves more actors.
+    <b>We propose a represenation of the trust that the end-user (you!) should have in a given online communication setup.</b>
+  </p>
+
+  <p>This survey will be used to evaluate the interest, usefulness, and clarity of our model as a security knowledge
+    representation. </p>
+
+  <p>The first half of the survey is dedicated to your actual trust in real time communication services.
+    The second half of the survey let you play with our model, before some questions on your perception of the way our model
+    represents information.
+  </p>
+
+  <p>The survey should not take more than 10 minutes to complete.</p>
+
+  <p><b>Thank you for taking some time helping us!</b></p>
+</div>
+
+
+<!-- <div class="page" ng-if="page == '1'">
+  <legend>Step 1 - HTTPS</legend>
+
+  <p>A certificate chain is an ordered hierarchy of digital certificates. In the chain, each certificates is signed by
+    a higher level certificate. The top-level certificate is provided by a root certificate authority. This mechanism
+    of trust propagation, allows an individuals to verify the validity of a certificate without direct trust in the
+    certificate's issuer.</p>
+
+  <p>In practice, root certificates are pre-loaded by browser vendors. When verifying a certificate provided by a web-server,
+  a web-browser must verify the validity of the whole certificate chain.</p>
+
+  <p>The Secure Hash Algorithm (SHA) family is often used to sign certificates. SHA-1 is now deemed unsecure and is
+  gradually withdrawn from use by Certificate Authority as well as browser vendors.</p>
+
+
+  <p>The above figure represents a certificate chain containing a weak certificate using SHA-1. Arrows represent trust
+  relations, i.e. the Browser trusts the Root CA, which in turn trusts the CA. This last CA trust the Web Site owner
+  (as to be the owner of the domain). This allows, in theory, the browser to establish a transitive trust relationship
+  to the actual web server.</p>
+
+  <br>
+
+</div>
+
+<div class="page" ng-if="page == '3'">
+  <legend>Scenario 2 - Transport Layer Security</legend>
+
+  <p>Transport Layer Security (TLS) is a cryptographic protocols used to ensure communications security over various
+  applications.</p>
+
+  <p>Communications security includes properties of privacy, authentication and integrity.
+    In TLS privacy is provided by symmetric cryptography (e.g. with AES), authentication by public
+    key cryptography (e.g. with RSA), and data integrity with Message Authentication Code (for instance with HMAC-SHA-1).</p>
+</div> -->
+
+<div class="page" ng-if="page == '1'">
+  <legend>Trust in Audio-Video communications</legend>
+
+ <!-- <p>We would like to compare the trust you may have in current real-time communication scenario with the trust you
+    would have in different WebRTC scenarios.</p>-->
+
+  <p>In this section, we are interested in the trust you may have in different communication services or communication scenarios. </p>
+
+  <p>Real Time Communication services allow for usages such as voice call, video call, and file sharing.
+    The communication is generally established by the exchange of signalling messages between participants.
+    These signalling messages are relayed by one or more Communication Services (CS).
+    CS are also responsible for authenticating their own participants when they connect to the service.</p>
+
+
+  <img src="../images/webrtc.021c416b.png" width="25%" style="display:block; margin: 0 auto;"/>
+
+  <p>WebRTC is a standard API provided by Web browsers for RTC communications.
+    As it is provided by web-browser any websites could become its own CS and offer RTC functionnalities.
+    WebRTC also offers a way for call-participants to exchange <b>identity assertion</b> provided by a third-party
+    <b>Identity Provider (IdP)</b>.
+    This IdP is independant from the communication services and allows users to authenticate directly to other participants.
+    The identity assertion is verified by the browser which then asserts that Bob is the participant on the other end of the call.
+  </p>
+
+</div>
+
+<!-- <div class="page" ng-if="page == '3'">
+  <legend>Trust Framework and Metric for Web based communication security</legend>
+  <div class="help-block">
+  <p>We propose a method for modeling and computing the trust that an end-user (or a policy authority) could have in a given online communication setup.
+    To this end, we build a user-centric functional decomposition of security properties and protocols from a communication setup.
+    We use information-theory entropy as a base trust metric and compute a global trust value with aggregation operators.
+    This end-value is then returned to the user. </p>
+  </div>
+
+  <div class="col-md-6">
+    <p><b>Functional Decomposition Model<br></b> We observe that security algorithms or protocols serve one or more objectives,
+      and expect that some properties be fulfilled by other protocols. For instance a protocol may be used to provide a
+      confidential exchange between Alice and Bob but would require Bob to be authenticated beforehand in order to be secure.
+      These security algorithms also rely on random values such as cryptographic keys, hash digest, etc.</p>
+
+    <p>We decompose a security configuration into several <b>components</b>. Each components <b>fulfill requirements and require
+    requirements</b> provided by other components. One of the requirement is the root of our decomposition tree, i.e. the
+    security property expected from the configuration. Some of these requirements are leaf of the decomposition tree,
+    we call them <b>primitives</b>. They represent security objects such as cryptographic keys or hash digest.
+    As such they can be <b>assigned entropy value</b> representing their resistance against attack.</p>
+
+    <p><b>Computational Model</b><br>
+      In order to compute the security level of a requirement realized by a component, we define aggregation operators
+      at the component level. Working from bottom to top, we use these operators to compute the value of the root. These
+      aggregation operators, set on a component, take requirements and primitives security value as input and return a
+      single security value which is associated to the component parent requirement.</p>
+
+    <p>Based on our observations and models from the literature we use two operators: <b>Weakest Link (MIN)</b> and
+      <b>Additive (SUM)</b> operators.</p>
+  </div> -->
+
+
+  <!-- <p class="col-md-6">
+  <p><b>Entropy Metric</b><br>
+    <p>It is possible to estimate at which computational cost a component is deemed secure. Based on this estimation a
+      minimum entropy level can be defined for each cryptographic primitives. In practice we could likewise use
+      recommendation provided by third-party (e.g. ANSSI RGS). We define our <b>security scale as a range on [0; 1]</b> with 0 meaning no
+      security and 1 meaning adequate protection [Lenstra, 2004].
+      Entropy values are then normalized with respect to the recommended minimum entropy. Value greater than their recommendation are normalized to 1.
+    </p>
+
+    <img src="../images/components.18a599d4.png" style="display:block; margin: 0 auto;"/>
+    <p style="text-align: center;">Figure: AES and RSA Components
+    </p>
+
+    <p>On this figure, the AES components fulfill a confidentiality requirement between A and B while it requires requirements
+    for integrity and authentication between A and B. It also relies on an AES 256 key primitives.
+    A MIN operation is applied to all its requirements and primitives to compute the value of the fulfilled requirement.</p>
+  </div>
+
+</div>
+
+  <div ng-if="page == '6'">
+    <legend>Model 1 - Transport Layer Security decomposition</legend>
+    <div class="help-block">
+    <p>Double-click on black circle (primitives) to edit their strength values.</p>
+  </div>
+
+    <div class="col-md-4" ng-controller="ModelFormController">
+      <form name="modelControl">
+        <label>
+          <input type="radio" ng-model="tlschoice.name" value="rsa2048aes256sha256" ng-change="onTLSModelChange()">
+          TLS with RSA2048-AES256-SHA256
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{rsa2048aes256sha256}}</li>
+          <li>Our model computes it as trust 1</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="tlschoice.name" value="rsa2048aes256sha1" ng-change="onTLSModelChange()">
+          TLS with RSA2048-AES256-SHA1
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{rsa2048aes256sha1}}</li>
+          <li>Our model computes it as trust 0</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="tlschoice.name" value="rsa1024aes256sha256" ng-change="onTLSModelChange()">
+          TLS with RSA1024-AES256-SHA256
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{rsa1024aes256sha256}}</li>
+          <li>Our model computes it as trust 0</li>
+        </ul>
+      </form>
+      <br>
+      <div class="modelDescription"  ng-if="displayModelTip()">
+        {{modelTip}}
+      </div>
+    </div>
+  </div> -->
+
+<!-- <div class="page" ng-if="page == '3'">
+  <legend>User centered Trust Layer</legend>
+  <div class="help-block">
+    <p>We also want to fit the trust model to the user point-of-view, its own subjectivity. To this end we add, on top of our model, an optional trust layer
+    expressing the trust that the user has in other actors.</p>
+  </div>
+    <p><b>Subjective weighting<br></b> Our standard model considers the difficulty for an attacker to mount an attack on
+      one of the properties expected by the user. Trust can be interpreted as a ”subjective probability with which an
+      agent will perform a particular action”. We consider actors not behaving as expected as attackers themselves.
+      Indeed they could be cooperating with an attacker, actively or unintentionally. Their position in the chain of
+      operations may give them important advantages on mounting these attacks. We thus compute the security expected
+      value (in the sense of probability theory). Practically,
+      this means that the security expected value is the trust-weighted average of its objective security value (genuine
+      actor) and zero (actor as an attacker).</p>
+
+  <p class="help-block">We won't details much further how we apply this trust layer. However you can use our dynamic model to see how it works
+  and what influence each actor has on the overall security level. Three pre-configured scenarios, matching earlier questions,
+    have also been setup.
+  </p>
+</div>
+
+</div> -->
+  <div ng-if="page == '2'" >
+  <legend>Model - WebRTC Communication Setup decomposition</legend>
+
+<div class="col-md-6" >
+  <p>
+    Here we model the security and trust of a WebRTC session.
+    The idea is to represent the trust that a user may have in the confidentiality of his communication.
+    We consider a call-session involving two participants, <b>Alice (you) and Bob.</b>
+    Each participants use a different communication service, <b>CSA</b> and <b>CSB</b>.
+  </p>
+  <p>
+      Bob also provides an identity assertion signed by and verified through <b>IdPB</b>, his Identity Provider.
+      This identity assertion binds the fingerprint of the session, <b>FnP</b>, to Bob's identity ensuring that no one is able to impersonate Bob.
+  </p>
+</div>
+<div class="col-md-6" >
+  <img src="../images/webrtc2.00e4cf68.png" width="50%" style="display:block; margin: 0 auto;"/>
+  <br>
+  <br>
+</div>
+<div class="col-md-12" >
+    <div class="help-block">
+    <p>
+      The blue panel allows to act on trust relations between actors of the call setup.
+      You can edit the trust of Alice to other actors with she directly interacts, but also the trust relations between other actors invisible.
+      For instance between Bob's CS and Bob's IdP.
+    </p>
+    <p>
+      Leafs of the model represent security primitives of the model and can be edited by a double-click on the black circle.
+      They represent the security parameters of the communication setup, for instance the password strength used by Bob or the individual TLS connections between two actors.
+    </p>
+    <p>
+      Finally, a set of pre-selected configurations can be selected to simulate different scenarios.
+    </p>
+    <hr><br>
+  </div>
+</div>
+    <div class="col-md-4" ng-controller="ModelFormController">
+      <form  name="modelControl">
+        <label>
+          <input type="radio" ng-model="trustChoice.name" value="ott" ng-change="onTrustModelChange()">
+          A well known Web communication service.
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{ott}}/10.</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="trustChoice.name" value="company" ng-change="onTrustModelChange()">
+          A Web meeting service provided by your company.
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{company}}/10.</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="trustChoice.name" value="ottCompany" ng-change="onTrustModelChange()">
+          A Web service for hosting work meeting and discussions.
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{ottCompany}}/10.</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="trustChoice.name" value="widget" ng-change="onTrustModelChange()">
+          A trusted WebRTC enabled webpage without a third party Identity Provider.
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{widget}}/10.</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="trustChoice.name" value="idp" ng-change="onTrustModelChange()">
+          A untrusted WebRTC enabled webpage with a third party Identity Provider.
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{idp}}/10.</li>
+        </ul>
+        <label>
+          <input type="radio" ng-model="trustChoice.name" value="insecure" ng-change="onTrustModelChange()">
+          A Real-Time Communication service using an old plugin and unspecified security parameters.
+        </label>
+        <ul>
+          <li>You estimated this configuration at trust {{insecure}}/10.</li>
+        </ul>
+      </form>
+      <br>
+      <div class="modelDescription" ng-if="displayModelTip()">
+        {{modelTip}}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="viz col-md-8" id="viz-div"></div>
+
+  <div class="page" ng-if="page == '3'">
+  </div>
+
+<div class="page"  ng-controller="FormController" ng-if="page == 'thanks'">
+  <div class="jumbotron">
+  <h2>Thank you very much for your contribution!</h2>
+
+  <img src="../images/cookie.ad70aee6.png"style="display:block; margin: 0 auto;">
+
+    <!-- <div class="help-block" style="text-align:left">
+    <p>You submited :</p>
+    <p>{{model}}</p>
+    </div> -->
+  </div>
+  <p>Again, if you have any questions or remarks that would not fit in this survey, feel free to contact me directly.</p>
+  <strong><a href="http://kcorre.github.io/">Kevin Corre</a></strong><br><br>
+
+</div>
+
+<div ng-controller="FormController" class="col-md-12" ng-if="page != 'thanks'">
+  <form name="myForm"
+        sf-schema="schema"
+        sf-form="form"
+        sf-model="model"
+        ng-submit="onSubmit()"></form>
+
+
+  <!--{{variable}}-->
+</div>
+
+<!--<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>-->

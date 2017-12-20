@@ -1,0 +1,68 @@
+{
+    "trust":{
+        "A":1,
+        "RP":1,
+        "IdP":1
+    },
+    
+    
+    "model":{
+        "name": "OIDC CODE FLOW",
+        "op": "MIN",
+        "children": [
+            {"name": "authent",
+            "altname": "AUTHENT",
+            "op": "MIN",
+            "children": [
+                {"name": "authIdPA",
+                "altname": "auth",
+                "X": "IdP",
+                "Y": "A",
+                "op": "null",
+                "children": [
+                    {"name": "password","value": 128}
+                ]},
+                {"name": "confIdPA",
+                "altname": "conf",
+                "X": "IdP",
+                "Y": "A",
+                "op": "null",
+                "children": [
+                    {"name": "https_1","value": 1024}
+                ]}
+            ]},
+            
+            {"name": "code",
+            "altname": "CODE",
+            "op": "MIN",
+            "children": [
+                {"name": "confRPA",
+                "altname": "conf",
+                "X": "RP",
+                "Y": "A",
+                "op": "null",
+                "children": [
+                    {"name": "https_2","value": 1024}
+                ]},
+                {"name": "code_strength","value": 2048}
+            ]},
+            
+            
+            {"name": "token",
+            "altname": "TOKEN",
+            "op": "MIN",
+            "children": [
+                {"name": "intRPIdP",
+                "altname": "int",
+                "X": "RP",
+                "Y": "IdP",
+                "op": "null",
+                "children": [
+                    {"name": "RSA","value": 256}
+                ]},
+                {"name": "nonce","value": 1024}
+            ]}
+        ]
+            
+    }
+}

@@ -1,0 +1,84 @@
+{
+  "trust":[
+    {"X":"A", "Y":"CSA", "val":1},
+    {"X":"A", "Y":"IdPB", "val":1},
+    {"X":"CSA", "Y":"CSB", "val":1},
+    {"X":"CSB", "Y":"IdPB", "val":1}
+  ],
+
+"model":{
+  "name":"WebRTC Confidentiality",
+  "op":"MIN",
+  "children":[{
+      "name": "Bob Authenticity",
+      "op": "AVG",
+      "children": [{
+        "name": "Sig A->B",
+        "op": "MIN",
+        "children": [
+          {"name": "tls_CSPA","altname":"TLS","value": 2048, "type":"modulus"},
+          {
+            "name": "Sig CSA->B",
+            "op": "MIN",
+            "X":"A","Y":"CSA",
+            "children": [
+              {"name": "tls_CSPB","altname":"TLS","value": 2048, "type":"modulus"},
+              {
+                "name": "Sig CSB->B",
+                "op": "MIN",
+                "X":"CSA","Y":"CSB",
+                "children": [
+                  {"name": "tls_CSPBB","altname":"TLS CSB-B","value": 2048, "type":"modulus"},
+                  {
+                    "name":"Bob 3P AAL", "altname":"Bob 3PAAL",
+                    "op":"MIN",
+                    "children":[
+                      {"name": "tls_IdPB","altname":"TLS CSB-IdP","value": 2048, "type":"modulus"},
+                      {"name": "TKNCSB","altname":"TkN aud:CSB","value": 2048, "type":"modulus"},
+                      {
+                        "name":"AALB", "altname":"AAL",
+                        "op":"MIN",
+                        "X":"CSB","Y":"IdPB",
+                          "children":[
+                          {"name": "Auth","altname":"Auth","value": 20, "type":"pwd"},
+                          {"name": "tls_IdPBB","altname":"TLS IdP-B","value": 2048, "type":"modulus"}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },{
+        "name": "Fingerprint Binding",
+        "altname": "Fp Binding",
+        "op": "MIN",
+        "children": [
+          {"name": "FNPB","altname":"FnP","value": 2048, "type":"modulus"},
+          {
+            "name":"Bob 3P AAL", "altname":"Bob 3PAAL",
+            "op":"MIN",
+            "children":[
+              {"name": "tls_IdPB","altname":"TLS A-IdP","value": 2048, "type":"modulus"},
+              {"name": "TKNAB","altname":"TkN aud:A","value": 2048, "type":"modulus"},
+              {
+                "name":"AALA", "altname":"AAL",
+                "op":"MIN",
+                "X":"A","Y":"IdPB",
+                "children":[
+                  {"name": "Auth","altname":"Auth","value": 20, "type":"pwd"},
+                  {"name": "tls_IdPBB","altname":"TLS IdP-B","value": 2048, "type":"modulus"}
+                ]
+              }
+            ]
+          }
+        ]
+      }]
+    },{
+      "name":"Media Confidentiality",
+      "children":[{"name": "tls_Media","altname":"DTLS-SRTP","value": 2048, "type":"modulus"}]
+    }]
+  }
+}
