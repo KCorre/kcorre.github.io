@@ -11,7 +11,7 @@
   "op":"MIN",
   "children":[{
       "name": "Bob Authenticity",
-      "op": "AVG",
+      "op": "MAX",
       "children": [{
         "name": "Sig A->B",
         "op": "MIN",
@@ -34,7 +34,7 @@
                     "op":"MIN",
                     "children":[
                       {"name": "tls_IdPB","altname":"TLS CSB-IdP","value": 2048, "type":"modulus"},
-                      {"name": "TKNCSB","altname":"TkN aud:CSB","value": 2048, "type":"modulus"},
+                      {"name": "TKNCSB","altname":"TkN aud:CSB","value": 256, "type":"hash"},
                       {
                         "name":"AALB", "altname":"AAL",
                         "op":"MIN",
@@ -56,13 +56,13 @@
         "altname": "Fp Binding",
         "op": "MIN",
         "children": [
-          {"name": "FNPB","altname":"FnP","value": 2048, "type":"modulus"},
+          {"name": "FNPB","altname":"FnP","value": 2048, "type":"hash"},
           {
             "name":"Bob 3P AAL", "altname":"Bob 3PAAL",
             "op":"MIN",
             "children":[
               {"name": "tls_IdPB","altname":"TLS A-IdP","value": 2048, "type":"modulus"},
-              {"name": "TKNAB","altname":"TkN aud:A","value": 2048, "type":"modulus"},
+              {"name": "TKNAB","altname":"TkN aud:A","value": 256, "type":"hash"},
               {
                 "name":"AALA", "altname":"AAL",
                 "op":"MIN",
@@ -78,7 +78,12 @@
       }]
     },{
       "name":"Media Confidentiality",
-      "children":[{"name": "tls_Media","altname":"DTLS-SRTP","value": 2048, "type":"modulus"}]
+      "op":"MIN",
+      "children":[
+        {"name": "tls_Media","altname":"DTLS","value": 256, "type":"ec"},
+        {"name": "srtp","altname":"SRTP","value": 128, "type":"symmetric"},
+        {"name": "FNPB","altname":"FnP","value": 256, "type":"hash"}
+      ]
     }]
   }
 }
