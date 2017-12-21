@@ -302,14 +302,18 @@ angular.module('trustModelFormApp')
                  title: 'Overall, do you agree with this model?'},
       tlsComment: {type:'string', title: 'Any comments?'},
 
-      webrtcHelpClarify: {type:'string', enum:['Interesting point of view', 'Slightly interesting', 'No'],
+
+      webrtcLevel: {type:'string', enum:['I don\'t understand the model', 'Top value', 'One or two level', 'The whole tree'],
+                       title: 'What is your prefered level of details?',
+                       description: 'Can you understand the whole decomposition or just the top trust value in the WebRTC session?'},
+      webrtcHelpClarify: {type:'string', enum:['Interesting', 'Slightly interesting', 'Not interesting'],
                        title: 'Evaluate the model\'s interest',
-                       description: 'Does this representation of a WebRTC identity model help you understand the situation?'},
-      webrtcHelpTrust: {type:'string', enum:['Interesting point of view', 'Slightly interesting', 'No'],
+                       description: 'Does this representation of a WebRTC security model help you understand the security issues?'},
+      webrtcHelpTrust: {type:'string', enum:['Interesting', 'Slightly interesting', 'Not interesting'],
                      title: 'Evaluate the trust layer\'s interest',
-                     description: 'Does the trust layer bring a new point of view to your understanding of security issues?'},
-      webrtcAgree: {type:'string', enum:['Yes', 'Some errors', 'No'],
-                 title: 'Overall, do you agree with this model?'},
+                     description: 'Does the trust layer bring a new point of view to your understanding of security issues? Would you like to be able to set trust values for actor of the Web or use a recommendation list?'},
+      webrtcAgree: {type:'string', enum:['Yes', 'Some errors', 'No', 'I don\'t know'],
+                 title: 'Overall, do you agree with this representation of WebRTC security issues?'},
       webrtcComment: {type:'string', title: 'Any comments?'}
     },
 
@@ -622,13 +626,29 @@ angular.module('trustModelFormApp')
                    },
                    "type": "radiobuttons"
                  },
-                 {
-                   "key": "webrtcComment",
-                   "type": "textarea",
-                   "placeholder": "Comment"
-                 },
+                   {"key": "webrtcLevel",
+                     "style": {
+                       "selected": "btn-success",
+                       "unselected": "btn-default"
+                     },
+                     "type": "radiobuttons"
+                   }
                ]
-             }
+             },
+             {"type": "section",
+                 "htmlClass": "row",
+                 "items": [
+                   {
+                     "type": "section",
+                     "htmlClass": "col-xs-12",
+                     "items": [
+                     {
+                       "key": "webrtcComment",
+                       "type": "textarea",
+                       "placeholder": "Comment"
+                     }]
+                 }]
+               }
            ]
        }
   ],
@@ -1073,14 +1093,14 @@ function update(source) {
 
         return d.rNorm
       })
-//	  .on('mouseover', function(d) {
-//            div.transition()
-//                .duration(200)
-//                .style('opacity', .9)
-//            div.html(d.value + ' bits')
-//            	.style('left', d.x + Math.sqrt((d.rNorm*d.rNorm)/2)+ 2* rOperator + margin.left + 2 +'px')
-//            	.style('top', d.y + Math.sqrt((d.rNorm*d.rNorm)/2) + margin.top + 10 +'px')
-//      })
+	  .on('mouseover', function(d) {
+           div.transition()
+               .duration(200)
+               .style('opacity', .9)
+           div.html(d.help)
+           	.style('left', d.x + Math.sqrt((d.rNorm*d.rNorm)/2)+ 2* rOperator + margin.left + 2 +'px')
+           	.style('top', d.y + Math.sqrt((d.rNorm*d.rNorm)/2) + margin.top + 10 +'px')
+     })
       .on('mouseout', function(d) {
             div.transition()
                 .duration(500)

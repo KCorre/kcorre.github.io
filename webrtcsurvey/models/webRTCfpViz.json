@@ -8,40 +8,54 @@
 
 "model":{
   "name":"WebRTC Confidentiality",
+  "help":"Trust in the confidentiality of your session.",
   "op":"MIN",
   "children":[{
       "name": "Bob Authenticity",
+      "help":"Trust in the authenticity of your peer.",
       "op": "MAX",
       "children": [{
         "name": "Sig A->B",
+        "help":"Trust in the signalling from your browser to Bob.",
         "op": "MIN",
         "children": [
-          {"name": "tls_CSPA","altname":"TLS","value": 2048, "type":"modulus"},
+          {"name": "tls_CSPA","altname":"TLS","value": 2048, "type":"modulus",
+          "help":"The security of your session with CSPA."},
           {
             "name": "Sig CSA->B",
+            "help":"Trust in the signalling from CSPA to Bob.",
             "op": "MIN",
             "X":"A","Y":"CSA",
             "children": [
-              {"name": "tls_CSPB","altname":"TLS","value": 2048, "type":"modulus"},
+              {"name": "tls_CSPB","altname":"TLS","value": 2048, "type":"modulus",
+              "help":"The security of CSPA's session with CSPB."},
               {
                 "name": "Sig CSB->B",
+                "help":"Trust in the signalling from CSPB to Bob.",
                 "op": "MIN",
                 "X":"CSA","Y":"CSB",
                 "children": [
-                  {"name": "tls_CSPBB","altname":"TLS CSB-B","value": 2048, "type":"modulus"},
+                  {"name": "tls_CSPBB","altname":"TLS CSB-B","value": 2048, "type":"modulus",
+                  "help":"The security of Bob's session with CSPB."},
                   {
                     "name":"Bob 3P AAL", "altname":"Bob 3PAAL",
+                    "help":"Trust in Bob's authentication from a third party IdP (Authentication Assurance Level).",
                     "op":"MIN",
                     "children":[
-                      {"name": "tls_IdPB","altname":"TLS CSB-IdP","value": 2048, "type":"modulus"},
-                      {"name": "TKNCSB","altname":"TkN aud:CSB","value": 256, "type":"hash"},
+                      {"name": "tls_IdPB","altname":"TLS CSB-IdP","value": 2048, "type":"modulus",
+                      "help":"The security of CSPB's session with IdPB."},
+                      {"name": "TKNCSB","altname":"TkN aud:CSB","value": 256, "type":"hash",
+                      "help":"The strength of IdPB's token signature."},
                       {
                         "name":"AALB", "altname":"AAL",
+                        "help":"The AAL asserted by the IdP.",
                         "op":"MIN",
                         "X":"CSB","Y":"IdPB",
                           "children":[
-                          {"name": "Auth","altname":"Auth","value": 20, "type":"pwd"},
-                          {"name": "tls_IdPBB","altname":"TLS IdP-B","value": 2048, "type":"modulus"}
+                          {"name": "Auth","altname":"Auth","value": 20, "type":"pwd",
+                          "help":"Bob's authentication strength."},
+                          {"name": "tls_IdPBB","altname":"TLS IdP-B","value": 2048, "type":"modulus",
+                          "help":"The security of Bob's session with IdPB."}
                         ]
                       }
                     ]
@@ -54,22 +68,30 @@
       },{
         "name": "Fingerprint Binding",
         "altname": "Fp Binding",
+        "help":"The binding of the signalling fingerprint with Bob's identity.",
         "op": "MIN",
         "children": [
-          {"name": "FNPB","altname":"FnP","value": 2048, "type":"hash"},
+          {"name": "FNPB","altname":"FnP","value": 2048, "type":"hash",
+          "help":"The strength of the signalling fingerprint."},
           {
             "name":"Bob 3P AAL", "altname":"Bob 3PAAL",
+            "help":"Trust in Bob's authentication from a third party IdP (Authentication Assurance Level).",
             "op":"MIN",
             "children":[
-              {"name": "tls_IdPB","altname":"TLS A-IdP","value": 2048, "type":"modulus"},
-              {"name": "TKNAB","altname":"TkN aud:A","value": 256, "type":"hash"},
+              {"name": "tls_IdPB","altname":"TLS A-IdP","value": 2048, "type":"modulus",
+              "help":"The security of your session with IdPB."},
+              {"name": "TKNAB","altname":"TkN aud:A","value": 256, "type":"hash",
+              "help":"The strength of IdPB's token signature."},
               {
                 "name":"AALA", "altname":"AAL",
+                "help":"The AAL asserted by the IdP.",
                 "op":"MIN",
                 "X":"A","Y":"IdPB",
                 "children":[
-                  {"name": "Auth","altname":"Auth","value": 20, "type":"pwd"},
-                  {"name": "tls_IdPBB","altname":"TLS IdP-B","value": 2048, "type":"modulus"}
+                  {"name": "Auth","altname":"Auth","value": 20, "type":"pwd",
+                  "help":"Bob's authentication strength."},
+                  {"name": "tls_IdPBB","altname":"TLS IdP-B","value": 2048, "type":"modulus",
+                  "help":"The security of Bob's session with IdPB."}
                 ]
               }
             ]
@@ -78,11 +100,15 @@
       }]
     },{
       "name":"Media Confidentiality",
+      "help":"The security of your peer to peer session with Bob.",
       "op":"MIN",
       "children":[
-        {"name": "tls_Media","altname":"DTLS","value": 256, "type":"ec"},
-        {"name": "srtp","altname":"SRTP","value": 128, "type":"symmetric"},
-        {"name": "FNPB","altname":"FnP","value": 256, "type":"hash"}
+        {"name": "tls_Media","altname":"DTLS","value": 256, "type":"ec",
+        "help":"Key strength used in the DTLS protocol."},
+        {"name": "srtp","altname":"SRTP","value": 128, "type":"symmetric",
+        "help":"Key strength used in the SRTP protocol."},
+        {"name": "FNPB","altname":"FnP","value": 256, "type":"hash",
+        "help":"The strength of the signalling fingerprint."}
       ]
     }]
   }
