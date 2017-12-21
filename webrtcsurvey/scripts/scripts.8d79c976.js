@@ -780,7 +780,7 @@ angular.module('trustModelFormApp')
         // ... do whatever you need to do with your data.
       $scope.model.timestamp = Date.now()
       console.log($scope.model)
-      fetch('http://serveur-du-placard.ml:3000/survey', {
+      fetch('http://serveur-du-placard.ml/survey', {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
