@@ -69,7 +69,6 @@ Previously I worked on [PLASMA Lab](https://project.inria.fr/plasma-lab/), a sta
 # <a name="Contact"></a> Contact
 #### @EDSI/Kudelski Security
 
-| | |
 | :------------- | :------------- |
 | **Address:** | EDSI/Kudelski Security |
 | | 8 Rue du Bordage, |
