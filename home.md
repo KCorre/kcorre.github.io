@@ -1,10 +1,16 @@
 # Presentation
 
-PhD R&D Software Engineer, I am specialising on Web and Communication Protocols Security.
-Currently I am working at Nagra/Kudelski Security, for the Software Security Team in Rennes. But I can't say more :)
+PhD and R&D Software Engineer, I am working in the domain of software and protocol security.
+I am approaching software engineering research with a 'hands on first' mentality.
+It's not enough to have a nice specification or a formal model, in the end, there must be an actual and practical software running and evolving over time.
+When needed, I also enjoy applying modelling and verification techniques.
+Thus, my professional objective is to bring this scientific approach into the software engineering security industry.
+If you'd like to discuss that, I'm all ears. 
+
+Currently I am working at Nagra/Kudelski Security, for the Software Security Team in Rennes. We are developping KOP, a software obfuscation and hardening tool working at the source level on any C-99 toolchain. Head over the tool's website to learn more: **[KOP](https://edsisecurity.com/kop)**.
 
 During my PhD, I focused on the integration of authentication delegation protocols, such as OAuth2, into the WebRTC security architecture.
-If you are interested in the results of this research work, you can check on **[my thesis on github](https://github.com/Sparika/PHD)**.
+If you are interested in the results of this research work, you can check on **[my thesis on github](https://github.com/Sparika/PHD)** or **[on HAL](https://hal.archives-ouvertes.fr/tel-01943728)**.
 I enjoyed this topic as it was involving recent W3C and IETF standards, security protocols, and JavaScript prototyping. 
 This work was accomplished at **Orange Labs** in the Identity and Trust Architecture research team and at **INRIA/IRISA** in the most awesome **[Diverse Team](http://diverse.irisa.fr/)**.
 I also had the opportunity to contribute to the H2020 reThink project.
@@ -12,8 +18,8 @@ I also had the opportunity to contribute to the H2020 reThink project.
 My Thesis supervisors were **[Olivier Barais](http://olivier.barais.fr/)**
 and **[Gerson Sunye](http://www.irisa.fr/triskell/members/gerson.sunye/index_html?set_language=en)**.
 
-Previously, from 2012 to 2014, I worked as an engineer at INRIA Rennes to develop PLASMA Lab, a statistical model checker.
-I graduated from Master Degree in Computer Science from the University of Orleans in 2012.
+Previously, from 2012 to 2014, I worked as an engineer at INRIA Rennes to develop and industrialize **[PLASMA Lab](https://project.inria.fr/plasma-lab/)**, a statistical model checker.
+I graduated from my Master Degree in Computer Science from the University of Orleans in 2012.
 
 #### Topics of Interest
 During my thesis, my research topics were related to **Identity Management** in the **Web** context and more particularly with the use case of **WebRTC** in mind.
