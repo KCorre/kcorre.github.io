@@ -1623,7 +1623,6 @@ body {
 
 .image-wrap-end img {
 	width:100%;
-	max-width: 100em;
 	height:auto;
 	-ms-interpolation-mode:bicubic
 }
