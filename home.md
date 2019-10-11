@@ -73,12 +73,11 @@ Previously I worked on [PLASMA Lab](https://project.inria.fr/plasma-lab/), a sta
 
 
 # <a name="Contact"></a> Contact
-#### @EDSI/Kudelski Security
+#### @EXFO Edge Innovation Team
 
 |||
 | :------------- | :------------- |
-| **Address:** | EDSI/Kudelski Security |
-| | 8 Rue du Bordage, |
-| | 35510 Cesson-Sévigné - France |
-| **Phone:** | |
-| **Email:** | kevin.corre@nagra.com  |
+| **Address:** | EXFO |
+| | 2 Rue Jacqueline Auriol, |
+| | 35136 Saint-Jacques-de-la-Lande - France |
+| **Email:** | kevin.corre@exfo.com  |
