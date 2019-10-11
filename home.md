@@ -81,3 +81,4 @@ Previously I worked on [PLASMA Lab](https://project.inria.fr/plasma-lab/), a sta
 | | 2 Rue Jacqueline Auriol, |
 | | 35136 Saint-Jacques-de-la-Lande - France |
 | **Email:** | kevin.corre@exfo.com  |
+| **Github:** | github.com/sparika  |
