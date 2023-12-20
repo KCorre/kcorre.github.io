@@ -1,0 +1,13 @@
+[work]
+title = "@EXFO"
+name = "EXFO"
+street = "2 Rue Jacqueline Auriol"
+postcode = "35136"
+city = "Saint-Jacques-de-la-Lande"
+country = "France"
+email = "kevin.corre@exfo.com"
+
+[online]
+github = { title = "Github", url = "https://github.com/sparika", value = "github.com/sparika" }
+gitlab = { title = "Gitlab", url = "https://gitlab.com/sparika", value = "gitlab.com/sparika" }
+linkedin = { title = "LinkedIn", url = "https://www.linkedin.com/in/kevin-corre-8b4b6982/", value = "in/kevin-corre-8b4b6982" }

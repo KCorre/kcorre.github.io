@@ -1,0 +1,25 @@
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--write-mode=overwrite"]
+
+[tasks.clean]
+command = "cargo"
+args = ["clean"]
+
+[tasks.build]
+command = "cargo-web"
+args = ["deploy --release -o ./docs"]
+dependencies = ["clean"]
+
+[tasks.run]
+command = "cargo-web"
+args = ["start --auto-reload"]
+dependencies = ["build"]
+
+[tasks.my-flow]
+dependencies = [
+    "format",
+    "build",
+    "test"
+]

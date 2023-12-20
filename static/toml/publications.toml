@@ -1,0 +1,41 @@
+[these]
+title = "User Controlled Trust and Security Level of Web Real-Time Communications"
+authors = "K. Corre."
+published = "Thèse, Université de Rennes"
+link = "https://www.theses.fr/2018REN1S029.pdf"
+
+[popets_2017]
+title = "Why Users Cannot Choose Their Identity Providers On The Web?"
+authors = "K. Corre, O. Barais, G. Sunyé, J. Crom, V. Frey"
+published = "In PoPETS, the Third Issue of the Proceedings on Privacy Enhancing Technologies Symposium, Minneapolis, USA, 2017"
+link = "https://hal.archives-ouvertes.fr/hal-01611048/"
+
+[icwe_2017]
+title = "A WebRTC Extension to Allow Identity Negotiation at Runtime"
+authors = "K. Corre, S. Bécot, O. Barais, G. Sunyé."
+published = "In ICWE 2017, 17th International Conference on Web Engineering, Rome, Italy, 2017"
+link = "https://kcorre.github.io/papers/WebRTCExtensionIdentityNegotiationRuntime.pdf"
+
+[brevet_orange]
+title = "Procédé de gestion de l'authentification d'un client dans un système informatique"
+authors = "K. Corre, V. Frey."
+published = "Brevet WO2017006013 A1"
+link = ""
+
+[brevet_exfo]
+title = "Over-the-top media service testing and QoE issues isolation"
+authors = "S. Nadeau, K. Corre."
+published = "US Patent 11,522,939, 2022"
+link = "https://patents.google.com/patent/US11522939B2/en"
+
+[draft_copeland]
+title = "Requirements for Trust and Privacy in WebRTC Peer-to-peer"
+authors = "R. Copeland, K. Corre, I. Friese, S. El Jaouhari."
+published = "IETF Draft"
+link = "https://tools.ietf.org/html/draft-copeland-rtcweb-p2p-idp-auth-00"
+
+[draft_corre]
+title = "Framework for QUIC Throughput Testing "
+authors = "K. Corre."
+published = "IETF Draft"
+link = "https://datatracker.ietf.org/doc/draft-corre-quic-throughput-testing/"

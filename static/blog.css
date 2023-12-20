@@ -1,0 +1,28 @@
+code {
+	width: 100%;
+	display: block;
+	line-height: 30px;
+	padding-left: 10px;
+	background: #888;
+	border-radius: 5px;
+	margin: 10px;
+	color: #fff;
+}
+
+.article-container p,
+.article-container ul {
+	margin: 20px 40px;
+}
+
+.image-container {
+	width: 400px;
+	margin: 0 auto;
+}
+img {
+	width: 100%;
+}
+.image-container p {
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+}
